@@ -15,7 +15,7 @@ def insert_item(rating, rating_position):
         if rating_position == rating[i]: # если встретился равный элемент, узнаем сколько таких и в конце вставляем введенный
             n = rating.count(rating[i])
             index = rating.index(rating[i])
-            rating.insert(index+n, rating_position)
+            rating.insert(index+n, rating_position) # это сделано, что точно следовать заданию - вставляем именно в конец одинаковых элементов
             return rating
         if rating_position > rating[i]: # если введенная цифра больше н-элемента на его место ставим эту цифру
             rating.insert(i, rating_position)

@@ -21,21 +21,41 @@ def add_new(staff):
         if mount.isdigit() == True:
             mount = int(mount)
             break
-    type_of_staff = input("Введите единыцы измерения\nПример: шт, кг, литр")
+    type_of_staff = input("Введите единыцы измерения\nПример: шт, кг, литр\n")
     new_staff = (len(staff) + 1, {"name": name_of_staff, "price": price, "mount": mount, "type": type_of_staff})
     staff.append(new_staff)
+    print(new_staff)
     return staff
+
+def total(staff):
+    names = []
+    price = []
+    mount = []
+    type_of_staff = []
+    total_staff = {"name":names , "price": price, "mount": mount, "type": type_of_staff}
+    for i in staff:
+        name_s= i[1].get("name")
+        names.append(name_s)
+        price_s = i[1].get("price")
+        price.append(price_s)
+        mount_s = i[1].get("mount")
+        mount.append(mount_s)
+        type_s = i[1].get("type")
+        type_of_staff.append(type_s)
+    print(total_staff)
+
 
 
 def main():
     staff = []
     while True:
-        choise = input("Смотреть готовую структуру, нажмите 1\nДобавить товары, нажмите 2")
-        if choise == 1:
-           pass
-        if choise == 2:
+        choise = input("Смотреть готовую структуру(если она не пустая), нажмите 1\nДобавить товары, нажмите 2\n3 - Выход\n")
+        if choise == "1":
+            total(staff)
+        if choise == "2":
             add_new(staff)
-    exit_or_not = input("Чтобы продолжить нажмите любую клавишу")
+        if choise == "3":
+            exit()
 
 
 if __name__ == '__main__':
