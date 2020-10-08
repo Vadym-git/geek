@@ -6,12 +6,14 @@
 Подсказка: факториал числа n — произведение чисел от 1 до n.
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24. На вебинаре реализовали похожий пример для чисел Фиббоначи.
 """
-from itertools import count
 import time
 n = 5
 def for_el_in_fact(n):
-    for i in count(n-1):
+    factorial = 1
+    print(factorial)
+    for i in range(2, n + 1):
+        factorial *= i
         print(i)
-        time.sleep(0.2)
-
-for_el_in_fact(n)
+    print(f"factorial = {factorial}") # я не понимаю, что тут хотят, чтобы я выводил в задании. Факториал функция считает!
+if __name__ == '__main__':
+    for_el_in_fact(n)
