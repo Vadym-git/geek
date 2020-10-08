@@ -18,3 +18,5 @@ def for_el_in_fact(n):
 if __name__ == '__main__':
     for i in for_el_in_fact(n):
         print(i)
+        if i > 10000: # на всякий случай стоп. вдруг в задании это надо
+            break
