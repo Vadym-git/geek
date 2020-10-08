@@ -13,7 +13,8 @@ def for_el_in_fact(n):
     print(factorial)
     for i in range(2, n + 1):
         factorial *= i
-        print(i)
+        yield factorial
     print(f"factorial = {factorial}") # я не понимаю, что тут хотят, чтобы я выводил в задании. Факториал функция считает!
 if __name__ == '__main__':
-    for_el_in_fact(n)
+    for i in for_el_in_fact(n):
+        print(i)
