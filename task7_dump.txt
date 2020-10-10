@@ -1,0 +1,1 @@
+[{"kovalen": -20108, "apple": 30888, "ms": 51772, "yandex": 30820, "acer": 20030}, {"average_profit": 33377.5}]
