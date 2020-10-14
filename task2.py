@@ -6,13 +6,17 @@
 толщиной в 1 см * число см толщины полотна. Проверить работу метода.
 Например: 20м * 5000м * 25кг * 5см = 12500 т
 '''
+
+
 class Road:
     def __init__(self, length, width):
         self.__length = length
         self.__width = width
+
     def weight(self):
-        waight = self.__length * self.__length*15*1 # толщину и вес ввожу сразу в коде, без переменных, как факт.
+        waight = self.__length * self.__length * 15 * 1  # толщину и вес ввожу сразу в коде, без переменных, как факт.
         print(f'{waight} т')
+
 
 nr = Road(20, 5000)
 nr.weight()

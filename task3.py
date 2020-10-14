@@ -6,20 +6,25 @@ income (доход). Последний атрибут должен быть з�
 (get_total_income). Проверить работу примера на реальных данных
 (создать экземпляры класса Position, передать данные, проверить значения атрибутов, вызвать методы экземпляров).
 '''
+
+
 class Worker:
     def __init__(self, name, sname, position, wage, bonus=None):
         self.name = name
         self.sname = sname
         self.position = position
-        self._income = {'wage':wage, 'bonus': bonus}
+        self._income = {'wage': wage, 'bonus': bonus}
+
 
 class Position(Worker):
     def get_full_name(self):
         fullname = f'{self.name} {self.sname}'.title()
         print(fullname)
+
     def get_total_income(self):
-        totalinc = self._income['wage']+self._income['bonus']
+        totalinc = self._income['wage'] + self._income['bonus']
         print(totalinc)
 
-worker = Position('Vadym','Mel','Manager assis',4000, 3000)
+
+worker = Position('Vadym', 'Mel', 'Manager assis', 4000, 3000)
 worker.get_total_income()

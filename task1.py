@@ -7,8 +7,11 @@
 (Для ожидания нескольких секунд можно использовать метод стандартной библиотеки time.sleep())
 '''
 import time
+
+
 class TrafficLight:
-    _color = 1
+    _color = 1  # ничего сюда не передаем, потому без инициализации.
+
     def running(self):
         self.color = 'RED'
         print(f'{self.color}')
@@ -19,5 +22,7 @@ class TrafficLight:
         self.color = 'GREEN'
         print(f'{self.color}')
         time.sleep(2)
+
+
 tl = TrafficLight()
 tl.running()
