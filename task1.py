@@ -45,7 +45,9 @@ class Matrix:
                 count_matrix.append(count_m1[k] + count_m2[k])
             total_matrix.append(count_matrix)
         return Matrix(total_matrix)
+
+
 matrix1 = Matrix(a)
 matrix2 = Matrix(b)
-matrix3 = matrix1+matrix2
+matrix3 = matrix1 + matrix2
 print(matrix3)
