@@ -22,7 +22,7 @@ class Data:
         или если мы присвоем какую-то дату экземпляру класса
         '''
         for i in data:
-            if not i.isdigit():
+            if not i.isdigit(): # смотрим пришли ли нам цифры вообще или что-то другое
                 raise ValueError(f'{i}; Only integers!')
         if int(data[0]) > 31 or int(data[0]) <= 0:
             raise ValueError(f'Wrong data size: {data[0]}')
